@@ -26,3 +26,9 @@ LGTMeow is a website that collects cat images that can be used as LGTM images. T
 2. Open Raycast and search for "LGTMeow".
 3. Select an image from the list to copy its Markdown link.
 4. Paste the link where you want to use the LGTM image.
+
+**Note:** Even after stopping `npm run dev` with `Ctrl` + `C`, the command will remain available in Raycast.
+
+## Disclaimer
+
+This extension is not affiliated with or endorsed by LGTMeow. It is an unofficial project created by an independent developer. Please use it responsibly and at your own risk.
