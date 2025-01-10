@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "nekochan",
-  "title": "LGTMeow (Unofficial)",
-  "description": "",
+  "name": "lgtmeow",
+  "title": "Lgtmeow",
+  "description": "Raycast extension for selecting and pasting LGTM images from LGTMeow in Markdown format.",
   "icon": "extension-icon.png",
   "author": "snaka",
   "categories": [
@@ -12,9 +12,9 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "neko",
-      "title": "neko",
-      "description": "",
+      "name": "lgtmeow",
+      "title": "Lgtmeow",
+      "description": "Display a list of cat images from LGTMeow and copy the URL of the selected image to the clipboard in Markdown format.",
       "mode": "view"
     }
   ],
