@@ -5,7 +5,7 @@ import { useFetch } from "@raycast/utils";
 type Item = {
   id: number;
   imageUrl: string;
-}
+};
 
 function formatImageMarkdown(imageUrl: string) {
   return `[![LGTMeow](${imageUrl})](https://lgtmeow.com)`;
@@ -14,18 +14,15 @@ function formatImageMarkdown(imageUrl: string) {
 export default function Command() {
   const [items, setItems] = useState<Item[]>([]);
 
-  const { isLoading } = useFetch<Item[]>(
-    "https://lgtmeow.com/api/lgtm-images",
-    {
-      onData: (data) => {
-        const newItems: Item[] = [];
-        for(const item of data) {
-          newItems.push(item)
-        }
-        setItems(newItems);
+  const { isLoading } = useFetch<Item[]>("https://lgtmeow.com/api/lgtm-images", {
+    onData: (data) => {
+      const newItems: Item[] = [];
+      for (const item of data) {
+        newItems.push(item);
       }
-    }
-  );
+      setItems(newItems);
+    },
+  });
 
   return (
     <Grid
@@ -42,10 +39,7 @@ export default function Command() {
           content={item.imageUrl}
           actions={
             <ActionPanel title="Choose a favorite neko-chan">
-              <Action.CopyToClipboard
-                title="Copy URL"
-                content={formatImageMarkdown(item.imageUrl)}
-              />
+              <Action.CopyToClipboard title="Copy URL" content={formatImageMarkdown(item.imageUrl)} />
               <Action.CopyToClipboard
                 title="Copy URL & Paste to Frontmost App"
                 content={formatImageMarkdown(item.imageUrl)}
